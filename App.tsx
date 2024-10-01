@@ -38,8 +38,10 @@ function MainScreen()
       
       <Text  style={styles.welcomeText}>Welcome, Christoffel!</Text>
       <View style={styles.InputFlex}>
-      <Text  style={styles.menuText}>MENU</Text> 
+      <Text  style={styles.menuItemsText}>Total Number Of Menu Items:4</Text>
+      <Text  style={styles.menuText}>MENU LIST</Text> 
       {/* this is my starters code */}
+      
       <Text  style={styles.startersText}>STARTERS</Text>
       <Text  style={styles.startersNameText}>Risotto:{'\n'} Wild Mushroom Arancini with Mozzarella
  </Text>
@@ -56,17 +58,27 @@ function MainScreen()
       <View style={styles.maincoursePicture}>
       <Image style={styles.maincourseImageSize}source={require('./img/MAIN COURSE.jpg')}></Image>
       </View>
-      <Text  style={styles.PriceMainNameText}>PRICE: R120 
+      <Text  style={styles.PriceMainNameText}>PRICE: R200 
  </Text>
  <Button title='Select'></Button>
       {/* this is my desert code*/}
-      <Text  style={styles.desertText}>DESERT</Text>
+      <Text  style={styles.desertText}>DESSERTS</Text>
       <Text  style={styles.desertNameText}>Potluck: {'\n'} White Chocolate OREO Cookie Balls
  </Text>
       <View style={styles.desertPicture}>
       <Image style={styles.desertImageSize}source={require('./img/POTLUCK.png')}></Image>
       </View>
-      <Text  style={styles.PricedesertNameText}>PRICE: R120 
+      <Text  style={styles.PricedesertNameText}>PRICE: R250 
+ </Text>
+      <Button title='Select'></Button>
+      {/* this is my Beverages code*/}
+      <Text  style={styles.beverageText}>BEVERAGES</Text>
+      <Text  style={styles.beverageNameText}>Lemonade: {'\n'}A sweetened lemon juice mixed with water.
+ </Text>
+      <View style={styles.beveragePicture}>
+      <Image style={styles.beverageImageSize}source={require('./img/beverage.jpg')}></Image>
+      </View>
+      <Text  style={styles.PriceBeverageNameText}>PRICE: R60 
  </Text>
       <Button title='Select'></Button>
       <Text  style={styles.manageText}>MENU MANAGEMENT</Text> 
@@ -99,11 +111,18 @@ const styles = StyleSheet.create({
    },
    //menu text
    menuText:{
-    paddingTop: 0,
+    paddingTop: 20,
     color:'black',
     fontWeight: 'bold',
     fontSize: 25,
     textDecorationLine:'underline',
+  },
+
+  menuItemsText:{
+    paddingTop: 20,
+    color:'skyblue',
+    fontWeight: 'bold',
+    fontSize: 20,
   },
   //
  
@@ -224,6 +243,36 @@ desertImageSize:{width: 350,
     fontSize:15,
   },
   PricedesertNameText:{
+    paddingTop: 10,
+    color:'purple',
+    fontWeight:'bold',
+    fontSize:15,
+  },
+  
+//
+
+//beverages code
+beverageText:{
+  paddingTop: 20,
+  color:'black',
+  fontWeight:'bold',
+  fontSize: 20,
+},
+beveragePicture:{
+  paddingTop: 20,
+  justifyContent: 'center',
+  alignItems: 'center',
+ },
+ beverageImageSize:{width: 350,
+  height: 150},
+
+  beverageNameText:{
+    paddingTop: 10,
+    color:'purple',
+    fontWeight:'bold',
+    fontSize:15,
+  },
+  PriceBeverageNameText:{
     paddingTop: 10,
     color:'purple',
     fontWeight:'bold',
